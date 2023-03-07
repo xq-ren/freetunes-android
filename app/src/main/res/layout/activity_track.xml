@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".PlaylistActivity">
+    tools:context=".TrackActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tracksView"
         android:layout_width="295dp"
         android:layout_height="86dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:text="@string/playlistText"
+        android:text="@string/trackText"
         android:textAlignment="center"
         android:textColor="#673AB7"
         android:textSize="60sp"
@@ -26,7 +26,7 @@
 
 
     <Button
-        android:id="@+id/buttonBackStart"
+        android:id="@+id/buttonBackPlaylist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonBackHome"
@@ -34,25 +34,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.949"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-
-    <!--<androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="573dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView" />-->
-
-    <Button
-        android:id="@+id/buttonToTrack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/toTrack"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonBackStart"
-        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />

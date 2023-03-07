@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--animation tutorial from M-ify Education on YouTube-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="#562e95"/>
+    <corners android:radius="500dp"/>
+
+</shape>

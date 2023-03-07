@@ -2,6 +2,9 @@ package ch.tb.FreeTunes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.accounts.AccountManager;
+import android.accounts.AccountManagerCallback;
+import android.accounts.AccountManagerFuture;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,17 +35,16 @@ public class PlaylistActivity extends AppCompatActivity {
 
     private static final String SPOTIFY_PLAYLIST_API = "https://api.spotify.com/v1/users/i3dyjo2q5t75gg1d11rd7fqth/playlists";
     private static final String ACCESS_TOKEN = "BQBoLFKs71L77b3FsA-4JQlNWx7TUjGuJDIPRllStzBaJ6LfiSegSYDuShCGUVuulsfP8q_o8FycjgHTpd1lzzFWCuvyDy_Ptxeh_UqU30l9bGqAFShmiU1Mr0quEpALQ-ev6VHpincpVK1C8vXCccPGEu_4_2w9v5I7PxR6ZaFtTVwKD898Oixi8mTOyeAcuXirBCNWWg";
-    public static final String CHARSET_NAME = "UTF-8";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playlist);
-        try {
+        /*try {
             getPlaylist();
         } catch (JSONException e) {
             throw new RuntimeException(e);
-        }
+        }*/
 
         Button buttonBackToStart = (Button) findViewById(R.id.buttonBackStart);
         buttonBackToStart.setOnClickListener(new View.OnClickListener() {
@@ -50,9 +52,16 @@ public class PlaylistActivity extends AppCompatActivity {
                 startActivity(new Intent(PlaylistActivity.this, MainActivity.class));
             }
         });
+
+        Button goTotracks = (Button) findViewById(R.id.buttonToTrack);
+        goTotracks.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(PlaylistActivity.this, TrackActivity.class));
+            }
+        });
     }
 
-    public List<Playlist> getPlaylist() throws JSONException {
+    /*public List<Playlist> getPlaylist() throws JSONException {
         List<Playlist> playlists = new ArrayList<>();
 
         String renPlaylist = SPOTIFY_PLAYLIST_API;
@@ -79,5 +88,5 @@ public class PlaylistActivity extends AppCompatActivity {
         }
         return playlists;
 
-    }
+    }*/
 }
