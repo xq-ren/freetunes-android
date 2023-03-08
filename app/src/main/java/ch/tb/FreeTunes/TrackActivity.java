@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import ch.tb.Model.Playlist;
 import ch.tb.Model.Track;
@@ -56,11 +57,13 @@ public class TrackActivity extends AppCompatActivity {
 
     private void sendNotification() {
         Track track = new Track();
-        Playlist playlist = new Playlist();
+        track.setArtist("KUTE");
+        track.setName("Dead On Arrival");
+
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.ic_media_play)
                 .setContentTitle(track.getName())
-                .setContentText("By " + track.getArtist() + ", playing in " + playlist.getName())
+                .setContentText("By " + track.getArtist())
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
         notificationManager.notify(0, builder.build());
     }
