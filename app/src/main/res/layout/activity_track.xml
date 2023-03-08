@@ -40,7 +40,7 @@
         android:id="@+id/buttonBackPlaylist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/buttonBackHome"
+        android:text="@string/buttonBack"
         android:background="@drawable/ripple_effects"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

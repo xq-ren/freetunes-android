@@ -2,7 +2,7 @@
     <string name="app_name">FreeTunes</string>
     <string name="buttonPlaylistText">GO TO PLAYLISTS</string>
     <string name="playlistText">Playlists</string>
-    <string name="buttonBackHome"><![CDATA[<-]]></string>
+    <string name="buttonBack">GO BACK</string>
     <string name="toTrack">GO TO TRACKS</string>
     <string name="trackText">All Tracks</string>
 </resources>
