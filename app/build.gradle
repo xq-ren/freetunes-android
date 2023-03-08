@@ -29,13 +29,7 @@ android {
 }
 
 dependencies {
-    //from towardsdatascience.com
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.spotify.android:auth:1.2.5'
-    implementation "com.google.code.gson:gson:2.9.0"
-    implementation 'com.android.volley:volley:1.2.1'
-
-    //default
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
